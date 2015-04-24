@@ -52,7 +52,7 @@ public class StockTicker extends JFrame{
 	}
 	
 	public void start(){
-		timer.startTiming(new TickerTask(), 1000, TICK_PERIOD);
+		timer.scheduleAtFixedRate(new TickerTask(), 1000, TICK_PERIOD);
 	}
 
 }

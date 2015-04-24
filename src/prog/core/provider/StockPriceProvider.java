@@ -5,6 +5,7 @@ import prog.core.Share;
 import prog.interfaces.StockPriceInfo;
 import prog.exception.ObjectNotFoundException;
 import prog.exception.ObjectAlreadyExistsException;
+import java.util.TimerTask;
 
 public abstract class StockPriceProvider implements StockPriceInfo {
 	//Create a few shares to play around with
@@ -83,7 +84,7 @@ public abstract class StockPriceProvider implements StockPriceInfo {
 	
 	//Start auto-updating share rates
 	public void startUpdate(){
-		timer.startTiming(new Runnable(){
+		timer.scheduleAtFixedRate(new TimerTask(){
 			public void run(){
 				updateShareRates();
 			}
