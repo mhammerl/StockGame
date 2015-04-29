@@ -1,4 +1,4 @@
-package prog.util;
+package prog.math;
 
 import java.util.Random;
 import java.lang.Math;

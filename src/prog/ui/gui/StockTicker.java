@@ -1,4 +1,4 @@
-package prog.graphics.gui;
+package prog.ui.gui;
 
 import java.util.TimerTask;
 import java.util.Timer;

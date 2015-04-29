@@ -2,15 +2,17 @@ package prog.core;
 
 import java.util.Scanner;
 
-import prog.graphics.gui.StockTicker;
+import prog.ui.gui.StockTicker;
 import prog.exception.GameException;
 import prog.exception.GameRuntimeException;
+import prog.ui.console.StockGameCommandProcessor;
 import prog.core.provider.*;
 
 public class StockGameLauncher {
 	private static StockPriceProvider provider = new PerlinStockPriceProvider(0.5, 6, 0.455, 2.5, 8);
 	private static AccountManagerImpl manager = new AccountManagerImpl(provider);
 	private static boolean debug = false;
+	private static StockGameCommandProcessor commandProcessor = new StockGameCommandProcessor(manager);
 	
 	private static void scanInput(){
 		try{
@@ -123,8 +125,10 @@ public class StockGameLauncher {
 		provider.createShare("Commerzbank", 1226);
 		provider.createShare("BASF", 8918);
 		
-		//Process player input
-		scanInput();
+//		//Process player input
+//		scanInput();
+		
+		commandProcessor.process();
 	}
 
 }

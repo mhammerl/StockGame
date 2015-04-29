@@ -2,7 +2,8 @@ package prog.core.provider;
 
 import prog.core.Share;
 import prog.exception.InvalidNumberException;
-import prog.util.Noise;
+import prog.math.Noise;
+
 import java.lang.Math;
 
 public class PerlinStockPriceProvider extends StockPriceProvider {

@@ -4,7 +4,6 @@ import java.util.Timer;
 
 public class GlobalTimer extends Timer {
 	private static GlobalTimer globalTimer;
-//	private Timer timer;
 	
 	private GlobalTimer() {};
 	
