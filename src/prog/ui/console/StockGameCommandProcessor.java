@@ -57,16 +57,16 @@ public class StockGameCommandProcessor {
 				case HELP:
 					writer.println(commandType.getHelpText());
 					break;
-//				case CREATEPLAYER:
-//					writer.println("Attempting to create player...");
-//					manager.createPlayer((String)params[0]);
-//					writer.println("Done");
-//					break;
-//				case BUYSHARE:
-//					writer.println("Attempting to buy share...");
-//					manager.buyShares((String)params[0], (String)params[1], (int)params[2]);
-//					writer.println("Done");
-//					break;
+				case CREATEPLAYER:
+					writer.println("Attempting to create player...");
+					manager.createPlayer((String)params[0]);
+					writer.println("Done");
+					break;
+				case BUYSHARE:
+					writer.println("Attempting to buy share...");
+					manager.buyShares((String)params[0], (String)params[1], (int)params[2]);
+					writer.println("Done");
+					break;
 				case LISTPLAYERS:
 					writer.println(manager.playerList());
 					break;
@@ -74,8 +74,8 @@ public class StockGameCommandProcessor {
 					writer.println("Command not found");
 					break;
 				}
-//			}catch(GameException e){
-//				handleGameException(e);
+			}catch(GameException e){
+				handleGameException(e);
 			}catch(GameRuntimeException e){
 				handleGameRuntimeException(e);
 			};

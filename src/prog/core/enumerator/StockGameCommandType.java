@@ -5,8 +5,8 @@ import prog.interfaces.CommandTypeInfo;
 public enum StockGameCommandType implements CommandTypeInfo{
 	HELP("help"," * list all commands"),
 	EXIT("exit"," * exit program"),
-//	CREATEPLAYER("crp","<name> * create new player", String.class),
-//	BUYSHARE("bs","<player> <sharename> <amount> * buy that amount of shares", String.class, String.class, int.class),
+	CREATEPLAYER("crp","<name> * create new player", String.class),
+	BUYSHARE("bs","<player> <sharename> <amount> * buy that amount of shares", String.class, String.class, int.class),
 	LISTPLAYERS("lsp"," * list all registered players");
 	
 	private String cmdName;
