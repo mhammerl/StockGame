@@ -72,6 +72,8 @@ public class StockGameLauncher {
 					
 				case "exit":
 					System.out.println("Bye");
+					scanner.close();
+					System.exit(0);
 					return;
 					
 				default:
